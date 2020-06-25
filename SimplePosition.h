@@ -1,16 +1,17 @@
 #pragma once
 #include "AbstractPosition.h"
 
-/*! Класс для простой позиции. Содержит в с простая строка со значением. 
-От данного класса дальнейшее наследование невозможно.
+/// \class SimplePosition
+/*! РљР»Р°СЃСЃ РґР»СЏ РїСЂРѕСЃС‚РѕР№ РїРѕР·РёС†РёРё. РЎРѕРґРµСЂР¶РёС‚ РІ СЃРµР±Рµ С‚РѕР»СЊРєРѕ СЃС‚СЂРѕРєСѓ СЃРѕ Р·РЅР°С‡РµРЅРёРµРј. 
+РћС‚ РґР°РЅРЅРѕРіРѕ РєР»Р°СЃСЃР° РґР°Р»СЊРЅРµР№С€РµРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ.
 */
 class SimplePosition final: public AbstractPosition {
 
 public:
 
 	SimplePosition(std::string );
-	std::string GetValue() const override; /**Возвращает значение позиции.*/
+	std::string GetValue() const override; /**Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР·РёС†РёРё.*/
 
-	bool operator==(const AbstractPosition&) const override; /**Определение оператора ==*/
+	bool operator==(const AbstractPosition&) const override; /**РћРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚РѕСЂР° ==*/
 
 };

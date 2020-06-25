@@ -1,6 +1,6 @@
 #include "SimplePosition.h"
 /**
-*Реализация методов класса SimplePosition
+*Р РµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° SimplePosition
 */
 
 SimplePosition::SimplePosition(std::string value)

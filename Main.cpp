@@ -39,7 +39,7 @@ int main() {
 		int i;
 		switch (c)
 		{
-		case controls::add: /**Добавление позиции*/
+		case controls::add: /**Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёРё*/
 			std::cout << "Please enter position value" << std::endl;
 			outputListFile.open(LISTOFPOSITIONFILE, std::ios::app);
 			std::cin >> buf;
@@ -47,7 +47,7 @@ int main() {
 			outputListFile << buf + '\n';
 			outputListFile.close();
 			break;
-		case controls::remove: /**Удаление позиции*/
+		case controls::remove: /**РЈРґР°Р»РµРЅРёРµ РїРѕР·РёС†РёРё*/
 			std::cout << "Please enter position value to remove" << std::endl;
 			std::cin >> buf;
 
@@ -59,7 +59,7 @@ int main() {
 			}
 			outputListFile.close();
 			break;
-		case controls::listAll: /**Вывод всех позиций*/
+		case controls::listAll: /**Р’С‹РІРѕРґ РІСЃРµС… РїРѕР·РёС†РёР№*/
 			allPositions = positionsList->ReturnAll();
 			i = 1;
 			for (const auto& position : allPositions) {

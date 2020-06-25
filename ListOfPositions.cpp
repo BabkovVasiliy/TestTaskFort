@@ -1,6 +1,6 @@
 #include "ListOfPositions.h"
 #include <algorithm>
-
+/// Реализация методов класса ListOfPositions
 void ListOfPositions::Add(AbstractPosition* newPosition)
 {	
 	positions.push_back(newPosition);
