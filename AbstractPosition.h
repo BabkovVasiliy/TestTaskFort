@@ -1,16 +1,16 @@
 #pragma once
 #include <string>
+
 /// \class AbstractPosition
-/*!Класс, описывающий абстрактую позицию. ќт него могут быть наследованы другие имплементации позиции, например со списком аргументов.
+/*!Класс, описывающий абстрактую позицию.
 
 */
 
 class AbstractPosition {
 protected:
-	std::string value; /*< «начение позиции. */
+	std::string value; /** Значение позиции. */
 public:
-
 	virtual ~AbstractPosition() {};
-	virtual std::string GetValue() const = 0; /* √еттер дл¤ значени¤*/
+	virtual std::string GetValue() const = 0; /** Геттер для значения*/
 	virtual bool operator==(const AbstractPosition&) const = 0 ;
 };

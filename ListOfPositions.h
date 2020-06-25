@@ -1,7 +1,7 @@
 #pragma once
 #include <list>
 
-#include "SimplePosition.h"
+class AbstractPosition;
 
 /// \class ListOfPositions
 /**
@@ -9,16 +9,19 @@
 */
 class ListOfPositions final{
 private:
-	std::list<AbstractPosition*> positions; /**< Лист всех позиций*/
+	/**Лист всех позиций*/
+	std::list<AbstractPosition*> positions; 
 public:
-	void Add(AbstractPosition*);	/**< Метод добавления позиции в лист*/
-	void Remove(AbstractPosition*); /**< Метод удаления позиции из листа*/
+	~ListOfPositions();
+	/** Метод добавления позиции в лист*/
+	void Add(AbstractPosition*);	
+	/**< Метод удаления позиции из листа*/
+	void Remove(AbstractPosition*);
 	/**
 		*Метод поиска позиции в листе.
 		*Данный метод возвращает ссылку на объект позиции.
 	*/
 	std::list<AbstractPosition*> Find(std::string);   
-
+	/**Метод, возвращающий все позиции*/
 	std::list<AbstractPosition*> ReturnAll();
-
 };

@@ -3,7 +3,7 @@
 *Реализация методов класса SimplePosition
 */
 
-SimplePosition::SimplePosition(std::string value)
+SimplePosition::SimplePosition(const std::string& value)
 {
 	this->value = value;
 }
@@ -15,5 +15,5 @@ std::string SimplePosition::GetValue() const
 
 bool SimplePosition::operator==(const AbstractPosition& other) const
 {
-	return(GetValue() == other.GetValue());
+	return GetValue() == other.GetValue();
 }

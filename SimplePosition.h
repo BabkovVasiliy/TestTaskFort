@@ -8,10 +8,9 @@
 class SimplePosition final: public AbstractPosition {
 
 public:
-
-	SimplePosition(std::string );
-	std::string GetValue() const override; /**Возвращает значение позиции.*/
-
-	bool operator==(const AbstractPosition&) const override; /**Определение оператора ==*/
-
+	SimplePosition(const std::string&);
+	/**Возвращает значение позиции.*/
+	std::string GetValue() const override;
+	/**Определение оператора ==*/
+	bool operator==(const AbstractPosition&) const override;
 };
