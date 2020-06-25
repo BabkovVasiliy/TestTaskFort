@@ -10,9 +10,9 @@ int main() {
 	const std::string help = "Enter 1 to add position to list.\nEnter 2 to remove position by name from list.\nEnter 3 to list all positions in list.\nEnter 4 to find positions in list\nEnter 5 to show this message.\nEnter 0 to quit.";
 	std::ofstream outputListFile;
 	ListOfPositions* positionsList = new ListOfPositions;
-	inputListFile.open(LISTOFPOSITIONFILE);
 	
 	std::ifstream inputListFile;
+	inputListFile.open(LISTOFPOSITIONFILE);
 	if (inputListFile.is_open()) {
 		std::string buf;
 		while (std::getline(inputListFile, buf))
@@ -24,7 +24,7 @@ int main() {
 	std::string controlSymbol;
 	std::cin >> controlSymbol;
 	
-	while (controlSymbol[0] != '0')
+while (controlSymbol[0] != '0')
 	{
 		controls c = static_cast<controls>(controlSymbol[0]);
 
@@ -32,9 +32,9 @@ int main() {
 		{
 		case controls::add:{
 			std::cout << "Please enter position value" << std::endl;
+			std::string buf;
 			std::cin >> buf;
 			if(!buf.empty()){
-				std::string buf;
 				outputListFile.open(LISTOFPOSITIONFILE, std::ios::app);
 				positionsList->Add(new SimplePosition(buf));
 				outputListFile << buf + '\n';
@@ -49,9 +49,8 @@ int main() {
 			std::string buf;
 			std::cout << "Please enter position value to remove" << std::endl;
 			std::cin >> buf;
-			SimlePosition pos(buf);
+			SimplePosition pos(buf);
 			positionsList->Remove(&pos);
-			delete(&pos);
 			outputListFile.open(LISTOFPOSITIONFILE,std::ios::trunc);
 			std::list<AbstractPosition*> allPositions = positionsList->ReturnAll();
 			for (const auto& position : allPositions) {
@@ -62,7 +61,7 @@ int main() {
 		}
 		case controls::listAll:
 		{
-			allPositions = positionsList->ReturnAll();
+			std::list<AbstractPosition*> allPositions = positionsList->ReturnAll();
 			int i = 1;
 			for (const auto& position : allPositions) {
 				std::cout << std::to_string(i) << ") " << position->GetValue() << std::endl;

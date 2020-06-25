@@ -11,8 +11,9 @@ void ListOfPositions::Remove(AbstractPosition* positionToRemove)
 	for (auto it = positions.begin(); it != positions.end(); ++it) {
 		AbstractPosition* pos = *it;
 		if (*pos == *positionToRemove) {
-			positions.erase(it);
+			it = positions.erase(it);
 			delete(pos);
+			--it;
 		}
 	}
 }
@@ -21,7 +22,7 @@ std::list<AbstractPosition*> ListOfPositions::Find(const std::string positionToF
 {
 	std::list<AbstractPosition*> found;
 	std::copy_if(positions.begin(), positions.end(), std::back_inserter(found),
-		[positionToFind](AbstractPosition* position) {return !position->GetValue().find(positionToFind); });
+		[positionToFind](auto position) {return !position->GetValue().find(positionToFind); });
 	return found;
 }
 
@@ -33,7 +34,7 @@ std::list<AbstractPosition*> ListOfPositions::ReturnAll()
 ListOfPositions::~ListOfPositions()
 {
 	for (auto it = positions.begin(); it != positions.end(); ++it) {
-			positions.erase(it);
-			delete(pos);
+			it = positions.erase(it);
+			delete(*it);
 	}
 }
