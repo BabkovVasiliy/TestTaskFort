@@ -33,7 +33,6 @@ std::list<AbstractPosition*> ListOfPositions::ReturnAll()
 ListOfPositions::~ListOfPositions()
 {
 	for (auto it = positions.begin(); it != positions.end(); ++it) {
-
 			positions.erase(it);
 			delete(pos);
 	}
