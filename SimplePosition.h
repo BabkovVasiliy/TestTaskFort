@@ -11,6 +11,8 @@ public:
 	SimplePosition(const std::string&);
 	/**Возвращает значение позиции.*/
 	std::string GetValue() const override;
-	/**Определение оператора ==*/
+	/**Определение оператора ==
+	*Возвращает true если value обоих операндов одинаково и false иначе.
+	*/
 	bool operator==(const AbstractPosition&) const override;
 };

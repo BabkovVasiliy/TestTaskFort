@@ -8,9 +8,12 @@
 
 class AbstractPosition {
 protected:
-	std::string value; /** Значение позиции. */
+	/** Значение позиции. */
+	std::string value; 
 public:
 	virtual ~AbstractPosition() {};
-	virtual std::string GetValue() const = 0; /** Геттер для значения*/
+	/** Геттер для значения*/
+	virtual std::string GetValue() const = 0; 
+	/**Оператор равенства*/
 	virtual bool operator==(const AbstractPosition&) const = 0 ;
 };

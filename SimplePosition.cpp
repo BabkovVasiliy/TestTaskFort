@@ -1,7 +1,4 @@
 #include "SimplePosition.h"
-/**
-*Реализация методов класса SimplePosition
-*/
 
 SimplePosition::SimplePosition(const std::string& value)
 {
