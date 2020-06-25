@@ -2,9 +2,7 @@
 #include <string>
 
 /// \class AbstractPosition
-/*!Класс, описывающий абстрактую позицию.
-
-*/
+/**Класс, описывающий абстрактую позицию.*/
 
 class AbstractPosition {
 protected:
