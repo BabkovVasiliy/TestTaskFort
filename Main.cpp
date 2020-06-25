@@ -7,7 +7,6 @@
 enum class controls:char {add = '1', remove = '2', listAll = '3', find = '4', help = '5'};
 
 int main() {
-	std::string intro = "";
 	std::string help = "Enter 1 to add position to list.\nEnter 2 to remove position by name from list.\nEnter 3 to list all positions in list.\nEnter 4 to find positions in list\nEnter 5 to show this message.\nEnter 0 to quit.";
 	std::string controlSymbol;
 
